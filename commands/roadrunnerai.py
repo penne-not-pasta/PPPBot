@@ -1,6 +1,6 @@
 import discord
 
-async def airunner(interaction: discord.Interaction, member: discord.Member, content: str):
+async def airunner(interaction: discord.Interaction, content: str):
     # TODO: Add ID to .env. Toto can u do it im busy :appl:
     await interaction.response.send_message(f"<@{275991832524095489}> {content}")
 module = {

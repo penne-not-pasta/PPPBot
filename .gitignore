@@ -4,3 +4,4 @@ Lib/
 Include/
 .github/ 
 pyvenv.cfg
+__pycache__/
