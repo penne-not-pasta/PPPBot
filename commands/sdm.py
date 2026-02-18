@@ -842,13 +842,13 @@ sdm = [
 
 def lookup_sdm_entry(name):
 	for entry in sdm:
-		if name in entry[0].split(":"):
+		if name in entry[0].lower().split(":"):
 			return entry[1]
 	return None
 
 async def sdm_command(interaction: discord.Interaction, instruction: str):
 	try:
-		description = lookup_sdm_entry(instruction)
+		description = lookup_sdm_entry(instruction.lower())
 		if description == None:
 			await interaction.response.send_message("No sdm entry found.", ephemeral=True)
 			return
